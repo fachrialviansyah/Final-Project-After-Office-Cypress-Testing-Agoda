@@ -63,6 +63,7 @@ Automation testing End-to-End untuk alur pemesanan tiket pesawat di [Agoda](http
 │   │       └── helpers.check.js        # self-check helper (node)
 │   ├── reports/                        # HTML report (hasil run)
 │   └── videos/                         # video Cypress (hasil run)
+├── docs/                               # bukti pengujian (screenshot)
 ├── scripts/
 │   └── verify-artifacts.js             # cek video + report + status test
 ├── .env / .env.example
@@ -148,7 +149,7 @@ Run terakhir: 16 Oct 2026, `npm run cy:run`, Chrome 155 headless, Windows 11.
 
 | Item | Hasil |
 |---|---|
-| Status | **1 test, 1 passed, 0 failed** (≈40 detik) |
+| Status | **1 test, 1 passed, 0 failed** (≈54 detik) |
 | Tanggal keberangkatan | 17 Oct 2026 (hari ini + 1) |
 | Kandidat Malaysia Airlines | 6 penerbangan (departure 09:10 ×4, 12:15 ×2) |
 | Penerbangan terpilih | 09:10 CGK → 14:40 SIN, 1 transit (1h 0m di KUL), 4h 30m |
@@ -158,6 +159,34 @@ Run terakhir: 16 Oct 2026, `npm run cy:run`, Chrome 155 headless, Windows 11.
 | HTML report | Ada |
 
 Hasil ini bergantung pada jadwal dan harga Agoda saat test dijalankan, jadi angkanya bisa berbeda di run berikutnya.
+
+### Bukti Pengujian
+
+Screenshot di bawah diambil dari HTML report dan video Cypress hasil run di atas.
+
+**HTML report: 1 passed, 0 failed**
+
+![HTML report](docs/html-report.png)
+
+**1. Homepage Agoda, tab Flights**
+
+![Homepage](docs/01-homepage.png)
+
+**2. Pilih tanggal keberangkatan (besok) di kalender**
+
+![Pilih tanggal](docs/02-pilih-tanggal.png)
+
+**3. Hasil pencarian CGK → SIN, test memilih penerbangan Malaysia Airlines paling awal**
+
+![Hasil penerbangan](docs/03-hasil-penerbangan.png)
+
+**4. Isi data kontak dan penumpang**
+
+![Passenger details](docs/04-passenger-details.png)
+
+**5. Halaman Payment: data penumpang dan total Rp 2,657,937 sesuai (tanpa membayar)**
+
+![Payment page](docs/05-payment-page.png)
 
 ## 14. Known Issues & Troubleshooting
 
