@@ -1,0 +1,22 @@
+{
+  "name": "agoda-e2e-automation",
+  "version": "1.0.0",
+  "description": "E2E automation testing Agoda flight booking (Cypress + POM)",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome --spec cypress/e2e/flight-booking.cy.js",
+    "cy:report": "generate-mochawesome-report",
+    "cy:verify": "node scripts/verify-artifacts.js",
+    "test:helpers": "node cypress/support/utils/helpers.check.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "cypress": "^16.2.0",
+    "cypress-mochawesome-reporter": "^5.0.0",
+    "dotenv": "^18.0.8"
+  }
+}

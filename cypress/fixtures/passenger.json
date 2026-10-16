@@ -1,0 +1,22 @@
+{
+  "contact": {
+    "firstName": "Budi",
+    "lastName": "Santoso",
+    "email": "budi.santoso.qa@example.com",
+    "countryOfResidence": "Indonesia",
+    "phoneCountryCode": "+62",
+    "phoneNumber": "81234567890"
+  },
+  "passenger": {
+    "gender": "Male",
+    "firstName": "Budi",
+    "lastName": "Santoso",
+    "nationality": "Indonesia",
+    "dateOfBirth": { "day": "15", "month": "June", "year": "1990" },
+    "passport": {
+      "number": "C1234567",
+      "countryOfIssue": "Indonesia",
+      "expiryDate": { "day": "20", "month": "December", "year": "2031" }
+    }
+  }
+}
